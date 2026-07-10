@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>KINGS OF NAILS — Monterey Park</title>
-<meta name="description" content="Where expert craftsmanship meets luxurious relaxation in Monterey Park.">
+<meta name="description" content="Where precision meets passion—your nails deserve a crown.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600|Merriweather:wght@300;400&display=swap" rel="stylesheet">
@@ -159,6 +159,20 @@ nav{position:sticky;top:0;z-index:200;background:#f8fafc;border-bottom:1px solid
 .map-wrap iframe{width:100%;height:320px;border:none;display:block}
 @media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
 
+/* ── Gallery ────────────────────────────────────────────────────────────────── */
+.gallery-section{background:#f8fafc;text-align:center}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:1rem;margin-top:2.5rem
+}
+.gallery-item{border-radius:10px;overflow:hidden;aspect-ratio:4/3;background:#ffffff}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.gallery-item:hover img{transform:scale(1.04)}
+/* Split hero image overlay tint */
+.hero-img-overlay{position:absolute;inset:0;background:#3a5f8a33}
+.hero-right{position:relative}
+
 /* ── Footer ─────────────────────────────────────────────────────────────────── */
 footer{background:#111827;color:rgba(255,255,255,.65);text-align:center;padding:2.5rem 1.5rem;font-size:.875rem}
 .footer-name{font-family:'Oswald',Impact,sans-serif;font-size:1.2rem;font-weight:600;color:#fff;margin-bottom:.4rem}
@@ -191,8 +205,8 @@ footer a:hover{color:#fff}
 
 <section id="hero" class="hero hero-split">
   <div class="hero-left">
-    <h1 class="hero-h1">Premium Nails, Royal Treatment Always</h1>
-    <p class="hero-tagline">Where expert craftsmanship meets luxurious relaxation in Monterey Park.</p>
+    <h1 class="hero-h1">Premium Nails, Expert Hands, Royal Results</h1>
+    <p class="hero-tagline">Where precision meets passion—your nails deserve a crown.</p>
     <a href="tel:16268997071" class="btn-hero">Book Your Nail Appointment</a>
     <p class="hero-phone-num">+1 626-899-7071</p>
   </div>
@@ -219,22 +233,27 @@ footer a:hover{color:#fff}
     <div class="service-card">
       <div class="svc-icon">👣</div>
       <h3 class="svc-name">Pedicures</h3>
-      <p class="svc-desc">Relaxing pedicure treatments with foot care and vibrant color options.</p>
+      <p class="svc-desc">Luxurious foot treatments with massage, exfoliation, and premium polish finishes.</p>
     </div>
     <div class="service-card">
       <div class="svc-icon">✨</div>
+      <h3 class="svc-name">Nail Art</h3>
+      <p class="svc-desc">Custom designs and creative nail art to express your unique style.</p>
+    </div>
+    <div class="service-card">
+      <div class="svc-icon">💎</div>
       <h3 class="svc-name">Gel Extensions</h3>
-      <p class="svc-desc">Long-lasting gel nail extensions for a flawless, natural-looking finish.</p>
+      <p class="svc-desc">Long-lasting gel nail extensions for strength and durability.</p>
     </div>
     <div class="service-card">
       <div class="svc-icon">🎨</div>
-      <h3 class="svc-name">Nail Art</h3>
-      <p class="svc-desc">Custom designs and decorative nail art to express your unique style.</p>
+      <h3 class="svc-name">Acrylics</h3>
+      <p class="svc-desc">Professional acrylic nails with stunning finishes and endless design options.</p>
     </div>
     <div class="service-card">
-      <div class="svc-icon">💇</div>
-      <h3 class="svc-name">Dip Powder</h3>
-      <p class="svc-desc">Durable dip powder nails that resist chipping and maintain shine.</p>
+      <div class="svc-icon">🧖</div>
+      <h3 class="svc-name">Spa Services</h3>
+      <p class="svc-desc">Relaxing hand and foot spa treatments to rejuvenate and refresh.</p>
     </div>
     </div>
   </div>
@@ -246,7 +265,7 @@ footer a:hover{color:#fff}
     <div class="about-inner">
       <p class="section-label">Our Story</p>
       <h2>About KINGS OF NAILS</h2>
-      <p class="about-text">Kings of Nails delivers impeccable nail care with meticulous attention to detail and personalized service. Our experienced technicians use premium products and maintain the highest sanitation standards. We're committed to making every visit a rejuvenating experience that leaves you feeling pampered and confident.</p>
+      <p class="about-text">Kings of Nails is your destination for flawless manicures, pedicures, and nail art in Monterey Park. Our skilled technicians combine attention to detail with a relaxing atmosphere, ensuring every visit leaves you feeling pampered and polished. We're committed to using quality products and maintaining the highest sanitation standards.</p>
       <span class="about-rule"></span>
       <div class="rating">
         ★★★★★
@@ -256,6 +275,8 @@ footer a:hover{color:#fff}
   </div>
 </section>
 
+
+
 <!-- ── Hours ──────────────────────────────────────────────────────────────── -->
 <section id="hours" class="section hours-section">
   <div class="container">
@@ -263,7 +284,10 @@ footer a:hover{color:#fff}
     <h2>Business Hours</h2>
     <div class="hours-box">
       <div class="hours-row">
-          <span class="hours-days">Monday – Saturday</span>
+          <span class="hours-days">Monday – Friday</span>
+          <span class="hours-time">10:00 AM – 7:00 PM</span>
+        </div><div class="hours-row">
+          <span class="hours-days">Saturday</span>
           <span class="hours-time">10:00 AM – 7:00 PM</span>
         </div><div class="hours-row">
           <span class="hours-days">Sunday</span>
@@ -302,7 +326,7 @@ footer a:hover{color:#fff}
 <!-- ── Footer ─────────────────────────────────────────────────────────────── -->
 <footer>
   <div class="footer-name">KINGS OF NAILS</div>
-  <p>Where expert craftsmanship meets luxurious relaxation in Monterey Park.</p>
+  <p>Where precision meets passion—your nails deserve a crown.</p>
   <p>2099 S Atlantic Blvd Ste N, Monterey Park, CA 91754, USA</p>
   <p><a href="tel:16268997071">+1 626-899-7071</a></p>
   <p class="footer-copy">© 2026 KINGS OF NAILS. All rights reserved.</p>
