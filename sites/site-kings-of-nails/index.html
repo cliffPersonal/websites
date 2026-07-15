@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>KINGS OF NAILS — Monterey Park</title>
+<meta name="description" content="Expert nail technicians delivering flawless manicures, pedicures, and custom nail art in a relaxing Monterey Park salon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blush:#fdf4f5; --primary:#d45c73; --plight:#fce8ed;
+  --text:#1a0e0e;  --mid:#7a5562;    --white:#ffffff;
+  --border:#f0d5dc; --shadow:0 2px 20px rgba(180,60,90,.08); --r:14px;
+  --amber:#f59e0b;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;background:var(--blush);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2rem,4vw,2.9rem);font-weight:700;color:var(--text);text-align:center;line-height:1.15}
+.hl{color:var(--primary)}
+.sect-badge{display:inline-flex;align-items:center;gap:.4rem;background:var(--plight);color:var(--primary);padding:.35rem .9rem;border-radius:100px;font-size:.8rem;font-weight:600;margin-bottom:.9rem}
+.sect-sub{text-align:center;color:var(--mid);font-size:1rem;max-width:520px;margin:.5rem auto 0}
+.sect{padding:5rem 2rem}
+.inner{max-width:1200px;margin:0 auto}
+
+/* ── Nav ── */
+nav{position:sticky;top:0;z-index:200;background:var(--blush);border-bottom:1px solid var(--border)}
+.nav-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;height:64px;padding:0 2rem}
+.nav-logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;font-weight:700;color:var(--text);display:flex;align-items:center;gap:.4rem;white-space:nowrap}
+.nav-logo svg{color:var(--primary)}
+.nav-links{display:flex;gap:1.75rem;margin-left:auto;align-items:center}
+.nav-links a{font-size:.875rem;font-weight:500;color:var(--mid);transition:color .2s}
+.nav-links a:hover{color:var(--primary)}
+.nav-cta{background:var(--primary);color:#fff!important;padding:.45rem 1.25rem;border-radius:100px;font-weight:600!important;transition:opacity .2s}
+.nav-cta:hover{opacity:.85}
+#nchk{display:none}
+.ntog{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;margin-left:auto}
+.ntog span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:.3s}
+@media(max-width:768px){
+  .ntog{display:flex}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--blush);flex-direction:column;padding:1rem 1.5rem 1.5rem;border-bottom:1px solid var(--border);gap:.875rem;box-shadow:var(--shadow)}
+  #nchk:checked~.nav-links{display:flex}
+  #nchk:checked~.ntog span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  #nchk:checked~.ntog span:nth-child(2){opacity:0}
+  #nchk:checked~.ntog span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+
+/* ── Hero ── */
+.hero-wrap{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:5rem 2rem;gap:4rem;min-height:88vh}
+.hero-text{flex:1}
+.hero-badge{display:inline-flex;align-items:center;gap:.4rem;background:var(--plight);color:var(--primary);padding:.38rem 1rem;border-radius:100px;font-size:.82rem;font-weight:600;margin-bottom:1.5rem}
+.hero-badge svg{color:var(--primary)}
+.hero-h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:700;line-height:1.1;margin-bottom:1.25rem}
+.hero-sub{color:var(--mid);font-size:1.05rem;max-width:440px;line-height:1.75;margin-bottom:2rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-pri{background:var(--primary);color:#fff;padding:.9rem 2rem;border-radius:100px;font-weight:600;font-size:.93rem;display:inline-flex;align-items:center;gap:.4rem;transition:opacity .2s,transform .2s}
+.btn-pri:hover{opacity:.87;transform:translateY(-2px)}
+.btn-out{background:transparent;color:var(--text);border:1.5px solid var(--text);padding:.9rem 2rem;border-radius:100px;font-weight:600;font-size:.93rem;transition:border-color .2s,color .2s}
+.btn-out:hover{border-color:var(--primary);color:var(--primary)}
+.hero-visual{flex:1;max-width:560px}
+.hero-img{width:100%;height:460px;object-fit:cover;border-radius:20px;box-shadow:0 24px 64px rgba(180,60,90,.18)}
+.hero-ph{width:100%;height:460px;border-radius:20px;background:linear-gradient(135deg,var(--plight),#f9d5e5);display:flex;align-items:center;justify-content:center;color:var(--primary)}
+@media(max-width:900px){
+  .hero-wrap{flex-direction:column;min-height:auto;padding:2.5rem 1.25rem;gap:2rem}
+  .hero-visual{width:100%;max-width:100%}
+  .hero-img,.hero-ph{height:260px}
+  .hero-h1{font-size:clamp(2.4rem,8vw,3.5rem)}
+  .btn-pri,.btn-out{padding:.8rem 1.5rem}
+}
+
+/* ── Book ── */
+.book-sect{background:var(--white)}
+.book-sect .inner{text-align:center}
+.book-card{background:var(--blush);border-radius:var(--r);padding:1.75rem;max-width:560px;margin:2rem auto 0;text-align:left;border:1px solid var(--border)}
+.book-card-title{font-weight:700;font-size:1.05rem;margin-bottom:.3rem}
+.book-card-sub{font-size:.875rem;color:var(--mid);margin-bottom:1.4rem}
+.book-btns{display:grid;grid-template-columns:1fr 1fr;gap:.875rem}
+.book-btn{background:var(--primary);color:#fff;padding:.95rem 1rem;border-radius:10px;font-weight:600;font-size:.93rem;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:opacity .2s}
+.book-btn:hover{opacity:.85}
+.book-btn svg{flex-shrink:0}
+@media(max-width:600px){.book-btns{grid-template-columns:1fr}}
+
+/* ── Reviews ── */
+.rv-sect{background:var(--blush)}
+.rv-scroll{display:flex;gap:1rem;overflow-x:auto;padding:2rem 0 .5rem;scrollbar-width:none;-ms-overflow-style:none}
+.rv-scroll::-webkit-scrollbar{display:none}
+.rv-card{background:var(--white);border-radius:var(--r);padding:1.5rem;min-width:300px;max-width:340px;flex-shrink:0;display:flex;flex-direction:column;gap:.75rem;box-shadow:var(--shadow)}
+.rv-stars{display:flex;gap:2px}
+.rv-text{font-size:.9rem;line-height:1.75;color:var(--text);flex:1}
+.rv-author{font-size:.8rem;color:var(--primary);font-weight:600}
+
+/* ── Services ── */
+.svc-sect{background:var(--white)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
+.svc-card{background:var(--blush);border-radius:var(--r);padding:1.6rem 1.4rem;border:1px solid var(--border);transition:transform .2s,box-shadow .2s}
+.svc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.svc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:.875rem}
+.svc-ico-wrap{width:40px;height:40px;border-radius:50%;background:var(--plight);display:flex;align-items:center;justify-content:center;color:var(--primary);flex-shrink:0}
+.svc-price{font-weight:700;font-size:1.1rem;color:var(--primary)}
+.svc-name{font-weight:700;font-size:.97rem;color:var(--text);margin-bottom:.4rem}
+.svc-desc{font-size:.845rem;color:var(--mid);line-height:1.65}
+@media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.svc-grid{grid-template-columns:1fr}}
+
+/* ── Artists ── */
+.artist-sect{background:var(--blush)}
+.artist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:1.1rem;margin-top:2.5rem}
+.artist-card{background:var(--white);border-radius:var(--r);padding:1.75rem 1.2rem;text-align:center;box-shadow:var(--shadow);transition:transform .2s}
+.artist-card:hover{transform:translateY(-4px)}
+.artist-avatar{width:60px;height:60px;border-radius:50%;background:var(--primary);color:#fff;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.7rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
+.artist-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:.25rem}
+.artist-role{font-size:.75rem;color:var(--primary);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem}
+.artist-specialty{font-size:.82rem;color:var(--mid);line-height:1.55}
+
+/* ── Gallery ── */
+.gal-sect{background:var(--blush)}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
+.gal-item{border-radius:var(--r);overflow:hidden;aspect-ratio:1;background:var(--plight)}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.gal-item:hover img{transform:scale(1.05)}
+@media(max-width:600px){.gal-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ── Find Us ── */
+.find-sect{background:var(--white)}
+.find-grid{display:grid;grid-template-columns:1fr 360px;gap:2rem;margin-top:2.5rem;align-items:start}
+.find-map{border-radius:var(--r);overflow:hidden;background:var(--plight);box-shadow:var(--shadow)}
+.find-map iframe{width:100%;height:420px;border:none;display:block}
+.find-cards{display:flex;flex-direction:column;gap:.875rem}
+.find-card{background:var(--blush);border-radius:var(--r);padding:1.2rem 1.4rem;display:flex;align-items:flex-start;gap:1rem;border:1px solid var(--border)}
+.find-ico{width:40px;height:40px;border-radius:50%;background:var(--plight);display:flex;align-items:center;justify-content:center;color:var(--primary);flex-shrink:0}
+.find-lbl{font-weight:700;font-size:.95rem;margin-bottom:.3rem}
+.find-val{font-size:.875rem;color:var(--mid);line-height:1.7}
+.find-val a{color:var(--primary);font-weight:600}
+@media(max-width:900px){
+  .find-grid{grid-template-columns:1fr}
+  .find-map iframe{height:260px}
+}
+
+/* ── Footer ── */
+footer{background:var(--primary);color:rgba(255,255,255,.82);padding:3.5rem 2rem 1.5rem}
+.foot-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2.5rem}
+.foot-logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;font-weight:700;color:#fff;margin-bottom:.5rem;display:flex;align-items:center;gap:.35rem}
+.foot-logo svg{color:rgba(255,255,255,.85)}
+.foot-tagline{font-size:.875rem;line-height:1.65;max-width:210px}
+.foot-col h4{color:#fff;font-family:'Jost',sans-serif;font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;font-weight:700;margin-bottom:.9rem}
+.foot-col a{display:block;font-size:.88rem;margin-bottom:.55rem;color:rgba(255,255,255,.72);transition:color .2s}
+.foot-col a:hover{color:#fff}
+.foot-col p{font-size:.875rem;line-height:1.9}
+.foot-socials{display:flex;gap:.65rem;margin-top:.25rem}
+.foot-social{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .2s}
+.foot-social:hover{background:rgba(255,255,255,.32)}
+.foot-copy{max-width:1200px;margin:2rem auto 0;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.18);font-size:.78rem;text-align:center;color:rgba(255,255,255,.5)}
+@media(max-width:768px){.foot-in{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.foot-in{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- ── Nav ──────────────────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-in">
+    <span class="nav-logo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> KINGS OF NAILS</span>
+    <input type="checkbox" id="nchk">
+    <label class="ntog" for="nchk" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="#book">Book</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#find">Visit</a>
+      <a href="#book" class="nav-cta">Book now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ─────────────────────────────────────────────────────────── -->
+<div class="hero-wrap">
+  <div class="hero-text">
+    <div class="hero-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Now accepting walk-ins</div>
+    <h1 class="hero-h1">Premium Nail Art & Manicure <span class="hl">Designs</span>.</h1>
+    <p class="hero-sub">Expert nail technicians delivering flawless manicures, pedicures, and custom nail art in a relaxing Monterey Park salon.</p>
+    <div class="hero-btns">
+      <a href="#book" class="btn-pri">Book appointment →</a>
+      <a href="#gallery" class="btn-out">View gallery</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydgaCKlAlTZJ-ul34JaHH9r-gbr9LpL_6oZjv18LQt8owtAysebkqt44FAdSMmQnc_jLjtKymg0VFC9kdYcbL8P8qjAPeOwASauyNWjvf0goMtSeX7tmC4WWWm9AqxvAPriEpl64Qz0pIMzSHffLV-lSoM45kuKiw4eqnPWZyyjjKKvaP9jnCXz4x3ar2WM11glEhVif76IxRwlRQxmIr3uIkqbg8t6K3E8b08zYwmOZMrErqDgWVC3CIU2up5kQ4ArKkb-WB8gHbNA4wf24JI-LTWaU_ZW976FBW556_ePcQNmsVJQL4G-4q9jD0m2Ykw2ySCBhm0t4Z2Uwmj6K0V-H4MT9AXzZoy1gDi_fqAeLj6DyZaW5uki0rDHI2MSAXXyzi8nv09Wf8s5AfCYXymav7E_p_u40mvAUaKQK7Osm8fg8TQedtKzUWZUP4Q&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="KINGS OF NAILS" class="hero-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="hero-ph" style="display:none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+  </div>
+</div>
+
+<!-- ── Book ─────────────────────────────────────────────────────────── -->
+<section id="book" class="sect book-sect">
+  <div class="inner">
+    <div class="sect-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Easy online booking</div>
+    <h2>Book your appointment</h2>
+    <p class="sect-sub">Call or text us for appointments.</p>
+    <div class="book-card">
+      <div class="book-card-title">Get in touch</div>
+      <div class="book-card-sub">Tap a button below and we'll schedule your visit right away.</div>
+      <div class="book-btns">
+        <a href="tel:16268997071" class="book-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 7a2 2 0 011.98-2H8.5a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.91 12.91a16 16 0 006.29 6.29l1.28-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Call Us</a>
+        <a href="sms:16268997071" class="book-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg> Text Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Reviews ───────────────────────────────────────────────────── -->
+<section id="reviews" class="sect rv-sect">
+  <div class="inner" style="text-align:center">
+    <h2>Loved by our clients</h2>
+    <p class="sect-sub">Real words from real regulars.</p>
+    <div class="rv-scroll">
+      <div class="rv-card"><div class="rv-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p class="rv-text">"Best nails 💅 in town 💯🔥✨🏆 I been getting my nails done here in soo many styles shapes & colors absolutely the best since I started getting my nails here haven’t been anywhere else 😁😎 Kenny & Cody are very talented,…"</p><div class="rv-author">Ruby Rodriguez</div></div><div class="rv-card"><div class="rv-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p class="rv-text">"Cody and Kenny have been the greatest nail salon text I’ve ever met. I’ve been going to them for a couple years now and they have never let me down every time I come in. They’re always welcoming and my nails have always …"</p><div class="rv-author">Gladys Angeles</div></div><div class="rv-card"><div class="rv-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p class="rv-text">"I have been coming to this place for the past year now and every time I come and get my nails done, it’s always worth it. Cody always does my nails and I absolutely love his service so much. I am so grateful that I found…"</p><div class="rv-author">Keiry Mendez</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Services ──────────────────────────────────────────────────────── -->
+<section id="services" class="sect svc-sect">
+  <div class="inner" style="text-align:center">
+    <div class="sect-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg> Service menu</div>
+    <h2>Treatments &amp; prices</h2>
+    <p class="sect-sub">Clean, precise work with transparent pricing. Every service ends with a flawless finish.</p>
+    <div class="svc-grid">
+    <div class="svc-card">
+      <div class="svc-top">
+        <div class="svc-ico-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
+        <div class="svc-price">$28</div>
+      </div>
+      <div class="svc-name">Gel Manicure</div>
+      <div class="svc-desc">Long-lasting gel polish application with a variety of colors and finishes for a salon-perfect look.</div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-top">
+        <div class="svc-ico-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
+        <div class="svc-price">$35</div>
+      </div>
+      <div class="svc-name">Acrylic Nails</div>
+      <div class="svc-desc">Custom acrylic nail extensions sculpted to your preferred length and shape with expert precision.</div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-top">
+        <div class="svc-ico-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
+        <div class="svc-price">$32</div>
+      </div>
+      <div class="svc-name">Pedicure</div>
+      <div class="svc-desc">Relaxing foot treatment with exfoliation, massage, and polish application for beautifully groomed toes.</div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-top">
+        <div class="svc-ico-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
+        <div class="svc-price">$45</div>
+      </div>
+      <div class="svc-name">Nail Art Design</div>
+      <div class="svc-desc">Creative custom nail art featuring hand-painted designs, rhinestones, and specialty techniques.</div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-top">
+        <div class="svc-ico-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
+        <div class="svc-price">$38</div>
+      </div>
+      <div class="svc-name">Gel Pedicure</div>
+      <div class="svc-desc">Extended-wear gel pedicure that keeps your feet looking vibrant and fresh for up to three weeks.</div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-top">
+        <div class="svc-ico-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
+        <div class="svc-price">$20</div>
+      </div>
+      <div class="svc-name">Nail Extensions & Repair</div>
+      <div class="svc-desc">Professional extension application and repair services to maintain and restore your nails.</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ── Artists ───────────────────────────────────────────────────── -->
+<section id="artists" class="sect artist-sect">
+  <div class="inner">
+    <h2>Meet Our Artists</h2>
+    <p class="sect-sub">Skilled, passionate, and here to bring your vision to life.</p>
+    <div class="artist-grid">
+      
+      <div class="artist-card">
+        <div class="artist-avatar">L</div>
+        <div class="artist-name">Linda</div>
+        <div class="artist-role">Senior Nail Technician</div>
+        <div class="artist-specialty">Gel manicures and advanced nail art</div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-avatar">M</div>
+        <div class="artist-name">Maria</div>
+        <div class="artist-role">Nail Technician</div>
+        <div class="artist-specialty">Acrylic extensions and pedicures</div>
+      </div>
+      <div class="artist-card">
+        <div class="artist-avatar">J</div>
+        <div class="artist-name">Jasmine</div>
+        <div class="artist-role">Nail Technician</div>
+        <div class="artist-specialty">Custom designs and decorative nail work</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Gallery ───────────────────────────────────────────────────── -->
+<section id="gallery" class="sect gal-sect">
+  <div class="inner" style="text-align:center">
+    <h2>Color in every detail</h2>
+    <p class="sect-sub">A few of our favorite designs. Bring your own idea or let us create one.</p>
+    <div class="gal-grid"><div class="gal-item"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydgaCKlAlTZJ-ul34JaHH9r-gbr9LpL_6oZjv18LQt8owtAysebkqt44FAdSMmQnc_jLjtKymg0VFC9kdYcbL8P8qjAPeOwASauyNWjvf0goMtSeX7tmC4WWWm9AqxvAPriEpl64Qz0pIMzSHffLV-lSoM45kuKiw4eqnPWZyyjjKKvaP9jnCXz4x3ar2WM11glEhVif76IxRwlRQxmIr3uIkqbg8t6K3E8b08zYwmOZMrErqDgWVC3CIU2up5kQ4ArKkb-WB8gHbNA4wf24JI-LTWaU_ZW976FBW556_ePcQNmsVJQL4G-4q9jD0m2Ykw2ySCBhm0t4Z2Uwmj6K0V-H4MT9AXzZoy1gDi_fqAeLj6DyZaW5uki0rDHI2MSAXXyzi8nv09Wf8s5AfCYXymav7E_p_u40mvAUaKQK7Osm8fg8TQedtKzUWZUP4Q&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="KINGS OF NAILS" loading="lazy" onerror="this.closest('.gal-item').style.display='none'"></div><div class="gal-item"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydjVU6Sm-VMFbLo4qaSnmfCoK9ps-xnEkp3QoOYDwqPBMNb6VPEV-u6_9TDnjkezYM58HVeotWvmc3doj5aRI8xXC8F6yS_Er7TQQ4v8USIWxQvydM2xv6S3myvpqhU2MCHvCi6SBvN06jNJpXd0RL01yKGTGGjMVCio7IquPacn_ebRSLwRS6vcHBdkKRbL30VeWvQh-hxEnjJFCf6rwnqPhidy43xr9SanWkORhc8vsOh8RF0fSIJpByvlcSayQw0ulK9VcXqfMg8hAspWRpe4G4X-7K36xL1lpAOvtqpW7Hvgjh4na9lwNuXFlvLUoat9TwJ3_H0QD1c_z534a5Ph-lO2KvBG65Ulk3Vbt-R1wefxQ8-na4xFXiB0UsZY7BZDY3yp3bx9X0g3Pvl6WeW0uIM2agRox7bg1ppvvWRZ4jhgIUihUXmmQ6Np8Wcv&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="KINGS OF NAILS" loading="lazy" onerror="this.closest('.gal-item').style.display='none'"></div><div class="gal-item"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydgIig73yjOY0SaQ5UBKbfQqOAPMSbp3wo29oLJG0_X4qLyvCkw7xZglSg6fF-yCEQiCggg6qGeso6TLj1wL0fLduttD4EHEJtqstHRQzBWYzD3-tsPwvJ2NXc6BEkiELw7wsuYX6a7Z9BdJSwHlCQgYM32HX8zHd6521G_pUv7iXIZHtrwM5hFWIITWnxh_RlvzzGkjnTizBDQVqeDrAs--_BMNkB2hFbd2PTxSbPAsgltnuMeGcXMmEHow36npnAEzhrOcPX2wRShfGuwrWqbyMZFQMGmr7UcjyJ0XeoDzANHU8vE4fecUy8C4TNHxSevNw1-DkGY0_iHmTUHKptGytu7bj9ME9ix85zzaSwUc3_jm5bQf_MbOiq2enq1FiRIsEGIkkuAcAC3P7XWZMEMeXytsLaA1lXYGthZDWZP-b4BfU6XDiQC-ouc0IQ&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="KINGS OF NAILS" loading="lazy" onerror="this.closest('.gal-item').style.display='none'"></div><div class="gal-item"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydjeu3-op1Tv04q-O4EAJzxDP2K_Ln_p_G9GhoxK9uDIGWOR37E6vEDOeAIjePtVKSTsQfMpMtDvY1xAEJ68geAleEERqVP2kE8fCcmdAbS1zGd19B-1dJEPX2Mf76clDlmvzk5_91b1Mmp0Uw2UCGLVHhGt4nLMglwOShoMcw8JeR6HlFEKL8SitQfmwT290Z85sbQ9tevbZmwOo7LkCFKQQuOEcYsqO1Ge0fNfUxKSBWfT8Iio1b0W-DayEtbuZN5JetLMTrvk2QwGczDODWJxpTb7wS8_IZoykUUw3wI8t9GCDRxVU7rhQHdvn_TfOoDMBjxelMN9VKSwhV0Q0Qe3vo4B_opLFamUUWmHrXnlU38fogQUbwQXVPgMyjjVA7ZkW0ScYPYPfPRNvLnotKKhbnTwIKo7_ELI9c4lD7MoRVm2ulKNGLwuhSyCd5lV&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="KINGS OF NAILS" loading="lazy" onerror="this.closest('.gal-item').style.display='none'"></div><div class="gal-item"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydhCcxU7clEUIIXJ5kspFgtjc3cE9tovlahpm5To-lTsgnAfvz1u9lht-62aEnZ_-VMFKebG-QouFKsrjel8_0BN3XgUMmhjO2BGj0wc8u3H6eDcvSvX5ZcdFZIEvCVDF5BkqSxIQGJVK_WFOh3NKMvcSgOQdNFN6Je9WzkhXsxbfdpgl31ByYoydoM6VnN7y51bptVtIL7v7HlMnO8cZpR8v6J_mSvkFqOlCmzKzQhnM2DG5dUYqLZHCRyd51gdL5-hf_wQx6WuERJ8s14vNTjl431enKRnpEbuZu6koDvdvlHsZYIAF8X1myZmspxUgK7nIjfu-PqnHViWEio9le04SNhCslcUak_Olc-BpuO8V_kaSmRaW0QfUhQWRxIBc0ET_vQ4FHvo7TSbb2QBLgwkCGJh0W5TYE6MONyI479h0weYQoNh1QPeNC8PYdd2&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="KINGS OF NAILS" loading="lazy" onerror="this.closest('.gal-item').style.display='none'"></div><div class="gal-item"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydhMdpHd9ArSF_RJPjXzK28blUC9xXpF-Eswj-uskJxYsrWcXIXIvthxO_c4BL_IRT6uFcF2ZtUF_5VAQX65NhGjy0W478UjBTH_wvEqTZMTkqK-8P-XUliKkR0OoZIi6YMMcvybpSvYnQS5VAmJ_e_UkViVsPOI89UZ9WBN3if6i4OMbejKJ2-1wD4BGxIA41dDQGRalVAY75IvdBZQDqRsP0aThLqJHFm6KuSxdjlPSHKWHp9hJbN5N7YANZQcvbvjC12fWH6HIJaY7RZxWFY5Cn6Dc_0EtCGy-4xz9pL1sV9GQoy3I90yRZ7bJDTBcZu61G9CoxUa9x248oJ9mYEXeHUfo8sjbzSr8W4gzIMqdlNKuDoig46v6fo0P1hDfsj5mT72rhHOVx8ABt6XV7QC1Ovv187vButWK9AWw3P3Y0rgtfxq08pfLHtxubx7&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="KINGS OF NAILS" loading="lazy" onerror="this.closest('.gal-item').style.display='none'"></div><div class="gal-item"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydilMzCctFNGXbdDkmn3GcF5zlMkwCeVqNOL4zf7HZyUcAexP2aVXJdRF8JcmaEDGh1sYQ56vATNwVXcd-LuWnPYCRbJmOkKz59dFpAos0YO5VQGBPAlpaLiGVmUusKhK8Y9xXRvk2VV_gQAGOSG0bf0eLOshJLHqXRp6IYcYKW8ZdJYvwP8vahJB59XTkAffewBiTWxe65IWrH5EvfXtA2RNa9xHeICv63jQd0D29YMe8DZGEfb0fW7IXSjGlJRiXz-03leUqTfJlYKJDh0EtO98PuM0GXG4e7NZdpM_P5QYjn_pKjCuzre4hlhtzg6CfnATGarISlETW9ed7GFLmr0dGBPa833jP5usB4DRTVT00hN7qwF9MIhgymJJhM4r8XCtKfCjAYvG0nOkpxGHMtfeqPi-WLbFnItr11uOwxh2cI&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="KINGS OF NAILS" loading="lazy" onerror="this.closest('.gal-item').style.display='none'"></div><div class="gal-item"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydhabKYSKIQbTAX-mlwjxCSSL29c_uJbYdiIPcExMxSpdpBk9vY3VhpwmmHGMq92oKI0N6gtvepH5Orn2mN_pNBlkmU_XghIAr1oyZwP6I0CS_CKdDMRpZSxXeQwX_DhHbVjVNQVcUJPCTDg8Of5TYt1-qSosdjT5Q2cgqWJUHUGMGC2EMjzaUx-wzx9lPpW8i_U_gaDggBwynXtFXyMG_bJTdjrZWyEr4sp_16aFXvuqQ2xuWgAU0OK-v5l_NMvVe0F17AFjhov_PoLLbF2Vhac_JP0adn1Ywm5a3DpAD6QeZBpUmzSMzQ_JuaNpAg1sw4DipBIEVdOz4neLQNYGdpk5Nv85p0pDb1FBdF_1wXaSVbkHS-PD_y-BHnj56LPIfHZ9GvNY61SJxIepesOckBJCwoDZ55otuzaaVJsjs_LssTpuzkEyBVE_XcIpJ_G&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="KINGS OF NAILS" loading="lazy" onerror="this.closest('.gal-item').style.display='none'"></div></div>
+  </div>
+</section>
+
+<!-- ── Find Us ────────────────────────────────────────────────────────── -->
+<section id="find" class="sect find-sect">
+  <div class="inner" style="text-align:center">
+    <h2>Find us</h2>
+    <p class="sect-sub">We're in Monterey Park. Come visit us.</p>
+    <div class="find-grid" style="text-align:left">
+      <div class="find-map">
+        <iframe src="https://maps.google.com/maps?q=2099%20S%20Atlantic%20Blvd%20Ste%20N%2C%20Monterey%20Park%2C%20CA%2091754%2C%20USA%2C%20Monterey%20Park&output=embed&z=15"
+          title="Map to KINGS OF NAILS" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="find-cards">
+        <div class="find-card"><div class="find-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="find-lbl">Address</div><div class="find-val">2099 S Atlantic Blvd Ste N, Monterey Park, CA 91754, USA<br>Monterey Park</div></div></div>
+        <div class="find-card"><div class="find-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="find-lbl">Hours</div><div class="find-val">Monday – Friday: 10:00 AM – 7:00 PM<br>Saturday: 10:00 AM – 6:00 PM<br>Sunday: 11:00 AM – 5:00 PM</div></div></div>
+        <div class="find-card"><div class="find-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 7a2 2 0 011.98-2H8.5a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.91 12.91a16 16 0 006.29 6.29l1.28-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><div class="find-lbl">Phone</div><div class="find-val"><a href="tel:16268997071">+1 626-899-7071</a></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ────────────────────────────────────────────────────────── -->
+<footer>
+  <div class="foot-in">
+    <div>
+      <div class="foot-logo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> KINGS OF NAILS</div>
+      <p class="foot-tagline">Expert nail technicians delivering flawless manicures, pedicures, and custom nail art in a relaxing Monterey Park salon.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Quick links</h4>
+      <a href="#book">Book now</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#artists">Artists</a>
+      <a href="#find">Contact</a>
+    </div>
+    <div class="foot-col">
+      <h4>Hours</h4>
+      <p>Monday – Friday<br><span style="color:rgba(255,255,255,.6)">10:00 AM – 7:00 PM</span><br>Saturday<br><span style="color:rgba(255,255,255,.6)">10:00 AM – 6:00 PM</span><br>Sunday<br><span style="color:rgba(255,255,255,.6)">11:00 AM – 5:00 PM</span></p>
+    </div>
+    <div class="foot-col">
+      <h4>Follow us</h4>
+      <div class="foot-socials"><a href="https://instagram.com/kingsofnails" target="_blank" rel="noopener" class="foot-social" title="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></div>
+    </div>
+  </div>
+  <p class="foot-copy">© 2026 KINGS OF NAILS. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
