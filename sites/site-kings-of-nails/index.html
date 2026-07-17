@@ -156,6 +156,7 @@ footer{background:var(--primary);color:rgba(255,255,255,.82);padding:3.5rem 2rem
 </style>
 
 
+
 <style id="site-patches">
 /* ── Section backgrounds (Bloom Jul 16 flowing pattern) ── */
 .book-sect{background:linear-gradient(to bottom,var(--white) 0%,var(--blush) 100%)}
@@ -167,10 +168,16 @@ footer{background:var(--primary);color:rgba(255,255,255,.82);padding:3.5rem 2rem
 /* ── Find Us ── */
 .find-grid{grid-template-columns:2fr 1fr}
 .find-ico{border-radius:8px}
-/* ── Service name — center text ── */
-.svc-name{text-align:center}
-/* ── Footer Instagram icon centering ── */
-.foot-social{line-height:1;padding:0;font-size:0}
+/* ── Service cards — Lovable layout: icon left | name center | price right ── */
+/* display:contents dissolves .svc-top so its children join the card grid     */
+.svc-card{display:grid;grid-template-areas:"icon name price" ". desc desc";grid-template-columns:40px 1fr auto;gap:.5rem .75rem;align-items:center}
+.svc-top{display:contents}
+.svc-ico-wrap{grid-area:icon;align-self:start;margin:0}
+.svc-price{grid-area:price;align-self:start;white-space:nowrap}
+.svc-name{grid-area:name;text-align:center;margin:0}
+.svc-desc{grid-area:desc}
+/* ── Footer Instagram icon — grid centering is more reliable than flex on <a> */
+.foot-social{display:grid;place-items:center;line-height:0;padding:0}
 .foot-social svg{display:block}
 </style>
 </head>
