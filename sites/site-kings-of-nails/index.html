@@ -154,6 +154,24 @@ footer{background:var(--primary);color:rgba(255,255,255,.82);padding:3.5rem 2rem
 @media(max-width:768px){.foot-in{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.foot-in{grid-template-columns:1fr}}
 </style>
+
+<style id="site-patches">
+/* ── Section backgrounds (Bloom Jul 16 flowing pattern) ── */
+.book-sect{background:linear-gradient(to bottom,var(--white) 0%,var(--blush) 100%)}
+.svc-sect{background:linear-gradient(to bottom,var(--blush) 0%,var(--white) 100%)}
+.gal-sect{background:linear-gradient(to bottom,var(--white) 0%,var(--blush) 100%)}
+.find-sect{background:linear-gradient(to bottom,var(--blush) 0%,var(--white) 100%)}
+/* ── Gallery items ── */
+.gal-item{border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+/* ── Find Us ── */
+.find-grid{grid-template-columns:2fr 1fr}
+.find-ico{border-radius:8px}
+/* ── Service name — center text ── */
+.svc-name{text-align:center}
+/* ── Footer Instagram icon centering ── */
+.foot-social{line-height:1;padding:0;font-size:0}
+.foot-social svg{display:block}
+</style>
 </head>
 <body>
 
@@ -173,7 +191,7 @@ footer{background:var(--primary);color:rgba(255,255,255,.82);padding:3.5rem 2rem
   </div>
 </nav>
 
-<!-- ── Hero ───────────────────────────────────────���─────────────────── -->
+<!-- ── Hero ───────────────────────────────────────����─────────────────── -->
 <div class="hero-wrap">
   <div class="hero-text">
     <div class="hero-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Now accepting walk-ins</div>
