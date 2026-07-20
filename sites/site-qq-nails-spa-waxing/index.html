@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>QQ Nails Spa & Waxing — Montebello</title>
+<meta name="description" content="We deliver pristine nails, smooth skin, and pure relaxation in a welcoming spa environment.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23d45c73'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='18' fill='white'%3EQ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blush:#fdf4f5; --primary:#d45c73; --plight:#fce8ed;
+  --text:#1a0e0e;  --mid:#7a5562;    --white:#ffffff;
+  --border:#f0d5dc; --shadow:0 2px 20px rgba(180,60,90,.08); --r:14px;
+  --amber:#f59e0b;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;background:var(--blush);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2rem,4vw,2.9rem);font-weight:700;color:var(--text);text-align:center;line-height:1.15}
+.hl{color:var(--primary)}
+.sect-badge{display:inline-flex;align-items:center;gap:.4rem;background:var(--plight);color:var(--primary);padding:.35rem .9rem;border-radius:100px;font-size:.8rem;font-weight:600;margin-bottom:.9rem}
+.sect-sub{text-align:center;color:var(--mid);font-size:1rem;max-width:520px;margin:.5rem auto 0}
+.sect{padding:5rem 2rem}
+.inner{max-width:1200px;margin:0 auto}
+
+/* ── Nav ── */
+nav{position:sticky;top:0;z-index:200;background:var(--blush);border-bottom:1px solid var(--border)}
+.nav-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;height:64px;padding:0 2rem}
+.nav-logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;font-weight:700;color:var(--text);display:flex;align-items:center;gap:.4rem;white-space:nowrap}
+.nav-logo svg{color:var(--primary)}
+.nav-links{display:flex;gap:1.75rem;margin-left:auto;align-items:center}
+.nav-links a{font-size:.875rem;font-weight:500;color:var(--mid);transition:color .2s}
+.nav-links a:hover{color:var(--primary)}
+.nav-cta{background:var(--primary);color:#fff!important;padding:.45rem 1.25rem;border-radius:100px;font-weight:600!important;transition:opacity .2s}
+.nav-cta:hover{opacity:.85}
+#nchk{display:none}
+.ntog{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;margin-left:auto}
+.ntog span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:.3s}
+@media(max-width:768px){
+  .ntog{display:flex}
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--blush);flex-direction:column;padding:1rem 1.5rem 1.5rem;border-bottom:1px solid var(--border);gap:.875rem;box-shadow:var(--shadow)}
+  #nchk:checked~.nav-links{display:flex}
+  #nchk:checked~.ntog span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  #nchk:checked~.ntog span:nth-child(2){opacity:0}
+  #nchk:checked~.ntog span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+
+/* ── Hero ── */
+.hero-wrap{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:5rem 2rem;gap:4rem;min-height:88vh}
+.hero-text{flex:1}
+.hero-badge{display:inline-flex;align-items:center;gap:.4rem;background:var(--plight);color:var(--primary);padding:.38rem 1rem;border-radius:100px;font-size:.82rem;font-weight:600;margin-bottom:1.5rem}
+.hero-badge svg{color:var(--primary)}
+.hero-h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:700;line-height:1.1;margin-bottom:1.25rem}
+.hero-sub{color:var(--mid);font-size:1.05rem;max-width:440px;line-height:1.75;margin-bottom:2rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-pri{background:var(--primary);color:#fff;padding:.9rem 2rem;border-radius:100px;font-weight:600;font-size:.93rem;display:inline-flex;align-items:center;gap:.4rem;transition:opacity .2s,transform .2s}
+.btn-pri:hover{opacity:.87;transform:translateY(-2px)}
+.btn-out{background:transparent;color:var(--text);border:1.5px solid var(--text);padding:.9rem 2rem;border-radius:100px;font-weight:600;font-size:.93rem;transition:border-color .2s,color .2s}
+.btn-out:hover{border-color:var(--primary);color:var(--primary)}
+.hero-visual{flex:1;max-width:560px}
+.hero-img{width:100%;height:460px;object-fit:cover;border-radius:20px;box-shadow:0 24px 64px rgba(180,60,90,.18)}
+.hero-ph{width:100%;height:460px;border-radius:20px;background:linear-gradient(135deg,var(--plight),#f9d5e5);display:flex;align-items:center;justify-content:center;color:var(--primary)}
+@media(max-width:900px){
+  .hero-wrap{flex-direction:column;min-height:auto;padding:2.5rem 1.25rem;gap:2rem}
+  .hero-visual{width:100%;max-width:100%}
+  .hero-img,.hero-ph{height:260px}
+  .hero-h1{font-size:clamp(2.4rem,8vw,3.5rem)}
+  .btn-pri,.btn-out{padding:.8rem 1.5rem}
+}
+
+/* ── Book ── */
+.book-sect{background:linear-gradient(to bottom,var(--blush) 0%,var(--white) 100%)}
+.book-sect .inner{text-align:center}
+.book-card{background:var(--blush);border-radius:var(--r);padding:1.75rem;max-width:560px;margin:2rem auto 0;text-align:left;border:1px solid var(--border)}
+.book-card-title{font-weight:700;font-size:1.05rem;margin-bottom:.3rem}
+.book-card-sub{font-size:.875rem;color:var(--mid);margin-bottom:1.4rem}
+.book-btns{display:grid;grid-template-columns:1fr 1fr;gap:.875rem}
+.book-btn{background:var(--primary);color:#fff;padding:.95rem 1rem;border-radius:10px;font-weight:600;font-size:.93rem;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:opacity .2s}
+.book-btn:hover{opacity:.85}
+.book-btn svg{flex-shrink:0}
+@media(max-width:600px){.book-btns{grid-template-columns:1fr}}
+
+/* ── Reviews ── */
+.rv-sect{background:linear-gradient(to bottom,var(--white) 0%,var(--blush) 100%);overflow:hidden;padding:5rem 0}
+@keyframes rv-marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.rv-outer{width:100%;overflow:hidden;margin-top:3rem;-webkit-mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent)}
+.rv-track{display:flex;width:max-content;gap:1.5rem;padding:0 1.5rem;animation:40s linear infinite rv-marquee}
+.rv-track:hover{animation-play-state:paused}
+.rv-card{background:var(--white);border-radius:20px;border:1px solid var(--border);padding:1.5rem;width:320px;flex-shrink:0;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 1px 3px rgba(0,0,0,.1),0 1px 2px -1px rgba(0,0,0,.08)}
+.rv-card-top{display:flex;flex-direction:column;gap:.75rem}
+.rv-stars{display:flex;gap:.25rem}
+.rv-text{font-size:.9rem;line-height:1.75;color:var(--text)}
+.rv-author{font-size:.85rem;font-weight:600;color:var(--primary);margin-top:1.25rem}
+@media(min-width:640px){.rv-card{width:380px}}
+
+/* ── Services ── */
+.svc-sect{background:linear-gradient(to bottom,var(--blush) 0%,var(--white) 100%)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
+.svc-card{background:var(--blush);border-radius:var(--r);padding:1.6rem 1.4rem;border:1px solid var(--border);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+.svc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.svc-head{display:flex;flex-direction:row;align-items:flex-start;justify-content:space-between;margin-bottom:.875rem}
+.svc-name-row{display:flex;align-items:center;gap:.75rem;flex:1}
+.svc-ico-wrap{width:40px;height:40px;border-radius:50%;background:var(--plight);display:flex;align-items:center;justify-content:center;color:var(--primary);flex-shrink:0}
+.svc-name{font-weight:700;font-size:.97rem;color:var(--text);flex:1;text-align:center}
+.svc-price{font-weight:700;font-size:1.1rem;color:var(--primary);white-space:nowrap;padding-top:.4rem}
+.svc-body{flex:1}
+.svc-desc{font-size:.845rem;color:var(--mid);line-height:1.65}
+@media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.svc-grid{grid-template-columns:1fr}}
+
+
+/* ── Gallery ── */
+.gal-sect{background:linear-gradient(to bottom,var(--white) 0%,var(--blush) 100%)}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
+.gal-item{border-radius:var(--r);overflow:hidden;aspect-ratio:1;background:var(--plight);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.gal-item:hover img{transform:scale(1.05)}
+@media(max-width:600px){.gal-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ── Find Us ── */
+.find-sect{background:linear-gradient(to bottom,var(--blush) 0%,var(--white) 100%)}
+.find-grid{display:grid;grid-template-columns:2fr 1fr;gap:2rem;margin-top:2.5rem;align-items:start}
+.find-map{border-radius:var(--r);overflow:hidden;background:var(--plight);box-shadow:var(--shadow)}
+.find-map iframe{width:100%;height:420px;border:none;display:block}
+.find-cards{display:flex;flex-direction:column;gap:.875rem}
+.find-card{background:var(--blush);border-radius:var(--r);padding:1.2rem 1.4rem;display:flex;align-items:flex-start;gap:1rem;border:1px solid var(--border)}
+.find-ico{width:40px;height:40px;border-radius:8px;background:var(--plight);display:flex;align-items:center;justify-content:center;color:var(--primary);flex-shrink:0}
+.find-lbl{font-weight:700;font-size:.95rem;margin-bottom:.3rem}
+.find-val{font-size:.875rem;color:var(--mid);line-height:1.7}
+.find-val a{color:var(--primary);font-weight:600}
+@media(max-width:640px){
+  .find-grid{grid-template-columns:1fr}
+  .find-map iframe{height:260px}
+}
+
+/* ── Footer ── */
+footer{background:var(--primary);color:rgba(255,255,255,.82);padding:3.5rem 2rem 1.5rem}
+.foot-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:2.5rem}
+.foot-logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;font-weight:700;color:#fff;margin-bottom:.5rem;display:flex;align-items:center;gap:.35rem}
+.foot-logo svg{color:rgba(255,255,255,.85)}
+.foot-tagline{font-size:.875rem;line-height:1.65;max-width:210px}
+.foot-col h4{color:#fff;font-family:'Jost',sans-serif;font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;font-weight:700;margin-bottom:.9rem}
+.foot-col a{display:block;font-size:.88rem;margin-bottom:.55rem;color:rgba(255,255,255,.72);transition:color .2s}
+.foot-col a:hover{color:#fff}
+.foot-col p{font-size:.875rem;line-height:1.9}
+.foot-hours-list{list-style:none;padding:0;margin:0;font-size:.875rem;line-height:1.9;color:rgba(255,255,255,.72)}
+.foot-socials{display:flex;gap:.65rem;margin-top:.25rem}
+.foot-social{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.18);position:relative;color:#fff;transition:background .2s;line-height:0;padding:0;font-size:0}
+.foot-social svg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:block}
+.foot-social:hover{background:rgba(255,255,255,.32)}
+.foot-copy{max-width:1200px;margin:2rem auto 0;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.18);font-size:.78rem;text-align:center;color:rgba(255,255,255,.5)}
+@media(max-width:1024px){.foot-in{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.foot-in{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- ── Nav ──────────────────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-in">
+    <span class="nav-logo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> QQ Nails Spa & Waxing</span>
+    <input type="checkbox" id="nchk">
+    <label class="ntog" for="nchk" aria-label="Menu"><span></span><span></span><span></span></label>
+    <div class="nav-links">
+      <a href="#book">Book</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#find">Visit</a>
+      <a href="#book" class="nav-cta">Book now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ─────────────────────────────────────────────────────────── -->
+<div class="hero-wrap">
+  <div class="hero-text">
+    <div class="hero-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Now accepting walk-ins</div>
+    <h1 class="hero-h1">Luxury Nails & Waxing in <span class="hl">Montebello</span>.</h1>
+    <p class="hero-sub">We deliver pristine nails, smooth skin, and pure relaxation in a welcoming spa environment.</p>
+    <div class="hero-btns">
+      <a href="#book" class="btn-pri">Book appointment →</a>
+      <a href="#gallery" class="btn-out">View gallery</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydg8gojEufYtlJOukrdUQrUiK2hRPfyA1PAn-PKWpl1EYHNQ6hcXlMsZPE05ujd-3LJuZerL5JH6kZ-6LQ_c1j57sTZSL4Qkg-5AMOvlLfpT2DfnirLapAg60OXaXHtSKlvF4avTz_1aK0e2TIFtMcAPQiPDDpcB_owaem9oIiepXlNnQFWdCLUT6XwWkLtYsAR1xuIPCAYb3WOKyKacUeBv_JnEV8kLbaPyn24OJbtqB0v8E5X6N3x3Szs2BiGpCfbaWAd4KrzlqkNvkRe8b4Y0NjZ0IfMWIYH55TeBuyIO02RnnEBbNqG37EMqImFebs7DADcVET4em780DWXqI2YXMKH4ggugbm1yEVQZ5X15H4ENPSDXfxSWf_LXlCMTyaZQPJ8gXgckaskNZydPEON9omwb2Xv2dhEAvT4PS3s7cYg&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="QQ Nails Spa & Waxing" class="hero-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="hero-ph" style="display:none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+  </div>
+</div>
+
+<!-- ── Book ─────────────────────────────────────────────────────────── -->
+<section id="book" class="sect book-sect">
+  <div class="inner">
+    <div class="sect-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Easy online booking</div>
+    <h2>Book your appointment</h2>
+    <p class="sect-sub">Call or text us for appointments.</p>
+    <div class="book-card">
+      <div class="book-card-title">Get in touch</div>
+      <div class="book-card-sub">Tap a button below and we'll schedule your visit right away.</div>
+      <div class="book-btns">
+        <a href="tel:13237217273" class="book-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 7a2 2 0 011.98-2H8.5a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.91 12.91a16 16 0 006.29 6.29l1.28-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Call Us</a>
+        <a href="sms:13237217273" class="book-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg> Text Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Reviews ───────────────────────────────────────────────────── -->
+<section id="reviews" class="sect rv-sect">
+  <div class="inner" style="text-align:center;padding:0 2rem">
+    <h2>Loved by our clients</h2>
+    <p class="sect-sub">Real words from real regulars.</p>
+  </div>
+  <div class="rv-outer">
+    <div class="rv-track">
+      <div class="rv-card"><div class="rv-card-top"><div class="rv-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p class="rv-text">"First time at this salon and I loved it! I got a Gel-X set and a pedicure, and both came out great. Kathy and Jenny did an amazing job and paid attention to every detail. I’m very happy with my nails and will definitely …"</p></div><div class="rv-author">Karina Gonzalez</div></div><div class="rv-card"><div class="rv-card-top"><div class="rv-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p class="rv-text">"jenny and lily are so nice and do great nails! 10/10 service"</p></div><div class="rv-author">alysa.moreno</div></div><div class="rv-card"><div class="rv-card-top"><div class="rv-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p class="rv-text">"Absolutely love this Nail salon always clean takes their time with you never disappoints all workers are very welcoming . So happy to keep coming back after 4 years"</p></div><div class="rv-author">Danielle Garcia</div></div><div class="rv-card"><div class="rv-card-top"><div class="rv-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p class="rv-text">"First time here and I loved the service. I am very picky with my pedi and Jenny did an amazing job. Definitely my new nail spot!"</p></div><div class="rv-author">Ambar Ceballos</div></div><div class="rv-card"><div class="rv-card-top"><div class="rv-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p class="rv-text">"First time at this salon and I loved it! I got a Gel-X set and a pedicure, and both came out great. Kathy and Jenny did an amazing job and paid attention to every detail. I’m very happy with my nails and will definitely …"</p></div><div class="rv-author">Karina Gonzalez</div></div><div class="rv-card"><div class="rv-card-top"><div class="rv-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p class="rv-text">"jenny and lily are so nice and do great nails! 10/10 service"</p></div><div class="rv-author">alysa.moreno</div></div><div class="rv-card"><div class="rv-card-top"><div class="rv-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p class="rv-text">"Absolutely love this Nail salon always clean takes their time with you never disappoints all workers are very welcoming . So happy to keep coming back after 4 years"</p></div><div class="rv-author">Danielle Garcia</div></div><div class="rv-card"><div class="rv-card-top"><div class="rv-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--amber)" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p class="rv-text">"First time here and I loved the service. I am very picky with my pedi and Jenny did an amazing job. Definitely my new nail spot!"</p></div><div class="rv-author">Ambar Ceballos</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Services ──────────────────────────────────────────────────────── -->
+<section id="services" class="sect svc-sect">
+  <div class="inner" style="text-align:center">
+    <div class="sect-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg> Service menu</div>
+    <h2>Treatments &amp; prices</h2>
+    <p class="sect-sub">Clean, precise work with transparent pricing. Every service ends with a flawless finish.</p>
+    <div class="svc-grid">
+    <div class="svc-card">
+      <div class="svc-head">
+        <div class="svc-name-row">
+          <div class="svc-ico-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div class="svc-name">Gel Manicure</div>
+        </div>
+        <span class="svc-price">$28</span>
+      </div>
+      <div class="svc-body">
+        <p class="svc-desc">Long-lasting gel polish with a perfect finish that stays vibrant for up to three weeks.</p>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-head">
+        <div class="svc-name-row">
+          <div class="svc-ico-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72z"/><path d="m14 7 3 3"/><path d="M5 6v4"/><path d="M10 2v2"/><path d="M7 8H3"/><path d="M11 3H9"/></svg></div>
+          <div class="svc-name">Acrylic Nails</div>
+        </div>
+        <span class="svc-price">$32</span>
+      </div>
+      <div class="svc-body">
+        <p class="svc-desc">Custom acrylic extensions shaped and styled to your specifications with expert application.</p>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-head">
+        <div class="svc-name-row">
+          <div class="svc-ico-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div>
+          <div class="svc-name">Pedicure</div>
+        </div>
+        <span class="svc-price">$25</span>
+      </div>
+      <div class="svc-body">
+        <p class="svc-desc">Relaxing foot treatment including exfoliation, massage, and polish application.</p>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-head">
+        <div class="svc-name-row">
+          <div class="svc-ico-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div class="svc-name">Waxing Services</div>
+        </div>
+        <span class="svc-price">$18</span>
+      </div>
+      <div class="svc-body">
+        <p class="svc-desc">Professional hair removal for face, body, and delicate areas using high-quality wax.</p>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-head">
+        <div class="svc-name-row">
+          <div class="svc-ico-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/><circle cx="8.5" cy="9" r=".75" fill="currentColor" stroke="none"/><circle cx="12" cy="6" r=".75" fill="currentColor" stroke="none"/><circle cx="15.5" cy="9" r=".75" fill="currentColor" stroke="none"/></svg></div>
+          <div class="svc-name">Nail Art Design</div>
+        </div>
+        <span class="svc-price">$12</span>
+      </div>
+      <div class="svc-body">
+        <p class="svc-desc">Creative custom designs and decorative nail art to express your personal style.</p>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ── Gallery ───────────────────────────────────────────────────── -->
+<section id="gallery" class="sect gal-sect">
+  <div class="inner" style="text-align:center">
+    <h2>Color in every detail</h2>
+    <p class="sect-sub">A few of our favorite designs. Bring your own idea or let us create one.</p>
+    <div class="gal-grid"><div class="gal-item"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydg8gojEufYtlJOukrdUQrUiK2hRPfyA1PAn-PKWpl1EYHNQ6hcXlMsZPE05ujd-3LJuZerL5JH6kZ-6LQ_c1j57sTZSL4Qkg-5AMOvlLfpT2DfnirLapAg60OXaXHtSKlvF4avTz_1aK0e2TIFtMcAPQiPDDpcB_owaem9oIiepXlNnQFWdCLUT6XwWkLtYsAR1xuIPCAYb3WOKyKacUeBv_JnEV8kLbaPyn24OJbtqB0v8E5X6N3x3Szs2BiGpCfbaWAd4KrzlqkNvkRe8b4Y0NjZ0IfMWIYH55TeBuyIO02RnnEBbNqG37EMqImFebs7DADcVET4em780DWXqI2YXMKH4ggugbm1yEVQZ5X15H4ENPSDXfxSWf_LXlCMTyaZQPJ8gXgckaskNZydPEON9omwb2Xv2dhEAvT4PS3s7cYg&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="QQ Nails Spa & Waxing" loading="lazy" onerror="this.closest('.gal-item').style.display='none'"></div><div class="gal-item"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydiI-_H89UWFe1tHIVK60EsSzPukfj9M2zjz9mg2mU4E4xdEDM11R426QH06TjMtaY2YqrA5xEGd-9B6x9O5W4ItsHguZ964y2D7Pn5jdaVGjvDPwCdD9GF5JzuWm_X9Rddfse78ZagHRdEMRVj-U7a6LsGa6nZ9zGzFxekAor-N5qTBQ8XMXEyJYdTsd-39U447_1_yR3Buztb696M0gaUVJayL4xqMgftkvoQpWe1y6hy5CtYSkKWxHdOc9KbbQEeKkXZzu5sHQuxgreMN5UoUzV6kVBuL59DhchJkoi_fW3-R2uPFTbi1b4g0UzWJTgE_znUyYkpIue4dyqMwuWKSIQeBcOvLe1LbYnJlQK6JDaFlCDaeycEz8IHDjcLB--NlRu2zFMl4L2dqBfXbpgkKLc9YCOWGvq6ApzFoPj9xBdA84zm_5jJ1qd_wJsKw&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="QQ Nails Spa & Waxing" loading="lazy" onerror="this.closest('.gal-item').style.display='none'"></div><div class="gal-item"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydgoEUl1WSpEJ6IKPzIc_r2uyOYcC0Bcb46MaHAfq5l4mmS7u9H0onJlqX1f38qsUnJ7wY5pd22xUdIdHvXmM4GCONyLhRHuEhmxfa1n4r0GK8XejYwH6AozAWD6Pllmw_e1jGXs4DS2DXccpjsJELsDehVIQ-utBo5C-bR_nOsWSw5g9mfKJVuZrEUIX0cooeTwPJTI3H4d868QHfxtTG8orlj4NS0ZyzM9TgxNI2r-KpacLSALCMFjx98ZmrupZ6ODin4eKeU0I07kVTYb9zofDsM_i4lSo2M95TXu7N3utYmqgnno0rT5zdXajnoyl-K6vC6v8cidM9fQYdKoRaNIoU8ual5EKuM7MRZaXnOlhM5nkPd8TPS5LYBIn3c1CrsYXLvstVrJdFIWnBmTpG85zCQwVYjzZ7UNrqBdu0GBYw&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="QQ Nails Spa & Waxing" loading="lazy" onerror="this.closest('.gal-item').style.display='none'"></div><div class="gal-item"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydgXlA6mghBsKCPEh_BiJHASCKO3dlwj9Ri55yTuWOXlElZyUDgofjCzwOaYzzexrgcF_7YMgzH6mtXrFzpQWueYgYwo0rnHC5zIytNZMHotg-8awJbRwZe4zNBKclSZUv8MOohZ9h2bScRo0qTKD7fw7q68ROKG5R-cpLQsDGfoxnQ_p8FD5e765WDzpHvnU85hlLyjA-nvuxPuP5hdmvwq_X_n54_qRWHLQOyW7y0fvhemEz1LwDtWTXAOBJpRnC-Z7n4tm37aZuRMvY9oENUrVBsBNvjFHsrBk1McZCGGwSV2JqgcjqqjpLqmyIWiPe4OQKOUB7MstnLNvYEYsqUlwdqMRhqm7n2SV3EUeGaADyh4N8poCA8FCMr3EXjPYByAkUSopN3R1blWJEE9L8StD37HKwiUDmkEN5g1ekW8XW74&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="QQ Nails Spa & Waxing" loading="lazy" onerror="this.closest('.gal-item').style.display='none'"></div><div class="gal-item"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydiWIXvvpamkgK6n8HA8_tJYLnQTjf3NgChlshOO_eh51ymYUNHVy8Km06dyUJxlJviucLS-LTMgVbpzQobEGg2gfa2qEgSiDUSXNtdQJsZUc-J-yy9-N9kqdVpcA5EP6xkIFK0-204wfKtNdG0XzYFdafYAhArwDlkJiRI1lHMR-PX5vPQx8PZtOiYcYa_O88XA29wHmz52Z0qjAyf-c4KWM3pKJ7hIzNPv1cUA-_X0-KEbXfDG05SEKXnle_l_syFmX-V6Fd7sCYjiCR61eGO8H4BZsstPS0-MSA8TM1Xc7Ec7_yjtyU70DwF-ixowxEfjdSxfYpHDUOSa-haz8vzZ68Tqn2plkWKzEVnHXbDUM733FX6E0Y5vZgE2CGwm_t2O5_89VUIgkpVadllOvSqzeuKAed0iRFW_Wk7NWXfGcQ&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="QQ Nails Spa & Waxing" loading="lazy" onerror="this.closest('.gal-item').style.display='none'"></div><div class="gal-item"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydgVd7LDyFm8d0dFMXjlo3TmZjiT99FQOexZIRTDGRJB2qEw2Hy4CU8QlsnVy1wGzxXeU4ZHf6RZXMSdIFeoMW3an2KhKd7sU_N63c59r8OndnPpe_LHOBRHnz6cn9bYsm5oQk-mhZE_dqHs7IcW0BtEaHCsjpE_B7lD9moO3vOUkaf6zEBpkBDISYBQ17aSd3fHb2IAyIy3uaTPZpGE_wV2CZ6koTajr0SMwqATBlUV4rB-dp9dOR3VZxi5clR4bAUrcSFLjzezCD3EOJNPM1vWsc6X8p6MTMEjbr0-4wLKgq2cNNZGaJQgVBb0s_TbbMzO_TxQ2wCPlMUCaMK3YQAyAq-deAufsHYM_JlzGiIg_MK3vJNtGAAVq961ouEjlI1Hu9DH0qyvSKj85mgQ1hQTUTGEwrrNP51T4pnBf5r7lQ&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="QQ Nails Spa & Waxing" loading="lazy" onerror="this.closest('.gal-item').style.display='none'"></div><div class="gal-item"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydhh-HahhVSjDC6311iNUKC5RZha9ds3LsNLzeUCWLJQkzxLGDmj7dLR9J2XhJVa4X7e0zYLdju1r0_3cnZwH_mKJsL45_8-Uf3rgQLcLXfcGNSojnRpy3SicCPIcglQuvU2fperRxzmyptElFAy7MCcyWXvkoFXsNkEeNsk_IGC1CcS7HEHoWUMsOkrsMqEhKoLvXluhk0KSEsZeO2oV_bBgFegt7t4Q3GrODVXZsrbhREWjhlpWMD2yZQGPjVEBk2kjS7MkbvDPdgWXvX72dT_dF4WjAff4JAw74ZJir2p_JHj7EY1WymOiIXze6fRBI7UI-_zY-uRWGp-jwlJll4fLkrqUzWc5A168sMPyLxwC95dIou27YD0D0zB8TUtJ-RtjgERRE76F9QBmYiNKAXiHh2ybhhubISamRm3EhFgVvvI&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="QQ Nails Spa & Waxing" loading="lazy" onerror="this.closest('.gal-item').style.display='none'"></div><div class="gal-item"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AWCwydjVxL0pAoIghXNhCev4aGrieN5sHzxUAVbwgnVGLkJBn8nVR9soAmzbKOGSNQ8iIih9m2lCkrJ5Fr8_I3hAoID3Y4sZF-MIJVljMb_A0iyFZ1z62jxvTUy9d0DG-DWpfdM1T8eYaGPiofZI_ESAwRgfLKzXnKBUFEZZLJOUj2o8iqxi3SKV1FYxrCEwiLk4cyg2T9lPzE2w3sjAd3RWSBnb5DMhHayvzjxWucK3vVe43eLjV-xmAcqtBmbC163mQleYzTLFTLHYknsvtQmk0I9P2X6Zl_ccIYowG96Ggfg1lZRWZjohXVveJBP38PzaDQb-JwoyTCw2mpaDbpG8l7zG0Irvm_MaoBra4h9YpKljAsXDp_tM565QvtSqREElQurdDRqMrLtOPn-8T7wjRYZZqeuX9xAWJYzZgwN6ZVsORg&key=AIzaSyCYPNCu2AmFtueDbw6JbvYSLzHK5mEqJIE" alt="QQ Nails Spa & Waxing" loading="lazy" onerror="this.closest('.gal-item').style.display='none'"></div></div>
+  </div>
+</section>
+
+
+<!-- ── Find Us ────────────────────────────────────────────────────────── -->
+<section id="find" class="sect find-sect">
+  <div class="inner" style="text-align:center">
+    <h2>Find us</h2>
+    <p class="sect-sub">We're in Montebello. Come visit us.</p>
+    <div class="find-grid" style="text-align:left">
+      <div class="find-map">
+        <iframe src="https://maps.google.com/maps?q=201%20E%20Beverly%20Blvd%2C%20Montebello%2C%20CA%2090640%2C%20USA%2C%20Montebello&output=embed&z=15"
+          title="Map to QQ Nails Spa & Waxing" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="find-cards">
+        <div class="find-card"><div class="find-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="find-lbl">Address</div><div class="find-val">201 E Beverly Blvd, Montebello, CA 90640, USA<br>Montebello</div></div></div>
+        <div class="find-card"><div class="find-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="find-lbl">Hours</div><div class="find-val">Monday – Friday: 10:00 AM – 7:00 PM<br>Saturday: 10:00 AM – 6:00 PM<br>Sunday: 11:00 AM – 5:00 PM</div></div></div>
+        <div class="find-card"><div class="find-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 7a2 2 0 011.98-2H8.5a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.91 12.91a16 16 0 006.29 6.29l1.28-1.29a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><div class="find-lbl">Phone</div><div class="find-val"><a href="tel:13237217273">+1 323-721-7273</a></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ────────────────────────────────────────────────────────── -->
+<footer>
+  <div class="foot-in">
+    <div>
+      <div class="foot-logo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> QQ Nails Spa & Waxing</div>
+      <p class="foot-tagline">We deliver pristine nails, smooth skin, and pure relaxation in a welcoming spa environment.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Quick links</h4>
+      <a href="#book">Book now</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#find">Contact</a>
+    </div>
+    <div class="foot-col">
+      <h4>Hours</h4>
+      <ul class="foot-hours-list"><li>Monday – Friday: 10:00 AM – 7:00 PM</li><li>Saturday: 10:00 AM – 6:00 PM</li><li>Sunday: 11:00 AM – 5:00 PM</li></ul>
+    </div>
+    <div class="foot-col">
+      <h4>Follow us</h4>
+      <div class="foot-socials"><a href="https://instagram.com/qqnailsspa_andwaxing" target="_blank" rel="noopener" class="foot-social" title="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></div>
+    </div>
+  </div>
+  <p class="foot-copy">© 2026 QQ Nails Spa & Waxing. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
